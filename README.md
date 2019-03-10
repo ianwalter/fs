@@ -10,19 +10,19 @@
    const text = await fs.readFile('./top-secret.txt')
    ```
 2. Subscribe to filesystem events from anywhere, e.g.:
-  ```js
-  fs.sub('./top-secret.txt', action => {
-    console.log(action.method, action.args)
-  })
-  ```
+   ```js
+   fs.sub('./top-secret.txt', action => {
+     console.log(action.method, action.args)
+   })
+   ```
 3. Control async filesystem events through subscriptions, e.g.:
-  ```js
-  fs.sub('./top-secret.txt', async action => {
-    if (action.method === 'writeFile') {
-      throw new Error('How dare you!? You have no write!')
-    }
-  })
-  ```
+   ```js
+   fs.sub('./top-secret.txt', async action => {
+     if (action.method === 'writeFile') {
+       throw new Error('How dare you!? You have no write!')
+     }
+   })
+   ```
 
 ## Installation
 
