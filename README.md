@@ -1,6 +1,8 @@
 # @ianwalter/fs
 > A Proxy over Node's fs module to make it Promise-based and add events
 
+[![npm page][npmImage]][npmUrl]
+
 ## Features
 
 1. Use Promises and/or async/await with fs methods, e.g.:
