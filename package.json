@@ -1,0 +1,18 @@
+{
+  "name": "@ianwalter/fs",
+  "description": "A Proxy over Node's fs module to make it Promise-based and add events",
+  "version": "0.0.0",
+  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "dist/fs.js",
+  "module": "dist/fs.m.js",
+  "scripts": {
+    "pretest": "dist",
+    "test": "ava"
+  },
+  "devDependencies": {
+    "@ianwalter/dist": "^3.0.0",
+    "ava": "^1.3.1",
+    "np": "^4.0.2"
+  }
+}
