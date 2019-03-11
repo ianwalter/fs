@@ -5,20 +5,20 @@
 
 ## Features
 
-1. Use Promises and/or async/await with fs methods, e.g.:
+1. Use Promises and/or async/await with async fs methods, e.g.:
    ```js
    const text = await fs.readFile('./top-secret.txt')
    ```
 2. Subscribe to filesystem events from anywhere, e.g.:
    ```js
    fs.sub('./top-secret.txt', action => {
-     console.log(action.method, action.args)
+     console.log(action.name, action.args)
    })
    ```
 3. Control async filesystem events through subscriptions, e.g.:
    ```js
    fs.sub('./top-secret.txt', async action => {
-     if (action.method === 'writeFile') {
+     if (action.name === 'writeFile') {
        throw new Error('How dare you!? You have no write!')
      }
    })
