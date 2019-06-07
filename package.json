@@ -7,6 +7,7 @@
   "main": "dist/fs.js",
   "module": "dist/fs.m.js",
   "scripts": {
+    "lint": "eslint index.js tests",
     "pretest": "dist",
     "test": "bff"
   },
@@ -35,11 +36,18 @@
   "devDependencies": {
     "@ianwalter/bff": "^5.2.1",
     "@ianwalter/dist": "^3.0.0",
+    "@ianwalter/eslint-config": "^2.0.1",
     "@ianwalter/renovate-config": "^1.1.0",
     "ava": "^1.3.1",
     "np": "^4.0.2"
   },
   "renovate": {
+    "extends": [
+      "@ianwalter"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
     "extends": [
       "@ianwalter"
     ]
